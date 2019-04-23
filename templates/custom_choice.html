@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block body %}
+<br/>
+
+<h1>Customised Main Selection</h1>
+<br>
+<br>
+<body>
+  <form method="POST">
+     <fieldset>
+        <legend>Customisable Mains</legend>
+        <p>
+           <label>Select your preferred Bun/Wrap</label>
+           <select name = "container">
+             <option value = "none">None</option>
+             <option value = "sesamebun2">2x Sesame Bun</option>
+             <option value = "sesamebun3">3x Sesame Bun</option>
+             <option value = "whitewrap">White Wrap Sheets</option>
+             <option value = "glutenfree">Gluten Free Wrap Sheets</option>
+           </select>
+           {% if containercheck == 'none' %}
+              <br>
+              <font color="red">{{ containererror }}</font>
+           {% endif %}
+           <br>
+           <label>Select your preferred Patty</label>
+           <select name = "contents">
+             <option value = "none">None</option>
+             <option value = "beef1">1x Beef Patty</option>
+             <option value = "beef2">2x Beef Patties</option>
+             <option value = "chicken1">1x Chicken Patty</option>
+             <option value = "chicken2">2x Chicken Patties</option>
+             <option value = "veg1">1x Vegie Patty</option>
+             <option value = "veg2">2x Vegie Patties</option>
+           </select>
+           {% if contentscheck == 'none' %}
+              <br>
+              <font color="red">{{ contenterror }}</font>
+           {% endif %}
+        </p>
+        <input type="submit" name="extras" value="Add Extra Toppings">
+        <br>
+        <br>
+        <input style="background:green" type="submit" name="add" value="Add Main to Order">
+        <input style="background:red" type="submit" name="cancel" value="Cancel">
+        <br>
+        <br>
+     </fieldset>
+  </form>
+
+</body>
+
+
+{% endblock %}

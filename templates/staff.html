@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block body %}
+<br/>
+
+<h1>Staff Options</h1>
+<br>
+<br>
+<body>
+  <form method="POST">
+     <fieldset>
+        <legend>Staff Options</legend>
+        <input type="submit" name="serve" value="Serve Order">
+<br>
+<br>
+        <input type="submit" name="view" value="View Active Orders">
+<br>
+<br>
+        <input type="submit" name="check" value="Check Inventory">
+<br>
+<br>
+        <input type="submit" name="update" value="Update Inventory">
+<br>
+<br>
+        <input type="submit" name="cancel" value="Cancel" style="background:red">
+<br>
+<br>
+     </fieldset>
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+
+
+{% endblock %}

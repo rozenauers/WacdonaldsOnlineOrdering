@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block body %}
+<br/>
+
+<h1>Update Inventory</h1>
+<br>
+<br>
+<body>
+  <form method="POST">
+     <fieldset>
+        <p>
+           <label for="itemName">Input Item Name:</label>
+           <input type="string" id="itemName" name="itemName" placeholder="Item name">
+           <label for="itemAmount">Input Refill Amount:</label>
+           <input type="number" id="itemAmount" name="itemAmount" min="0" value="0" placeholder="Item Quantity > '0'">
+           
+           {% if nameerror %}
+              <br>
+              <font color="red">{{ nameerror }}</font>
+           {% endif %}
+           <br>
+           {% if amounterror %}
+              <br>
+              <font color="red">{{ amounterror }}</font>
+           {% endif %}
+        
+           {% if name %}
+              <br>
+              <br>
+              <font color="black">{{ name }} : {{ inv }}</font>
+           {% endif %}
+
+        </p>
+        <br>
+        <input type="submit" name="refill" value="Refill Inventory">
+        <input type="submit" name="cancel" value="Cancel">
+        <br>
+        <br>
+     </fieldset>
+  </form>
+
+</body>
+
+
+{% endblock %}
+

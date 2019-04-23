@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block body %}
+<img src="https://pbs.twimg.com/profile_images/378800000845726730/2db746541d2a1840e050533eba244270_400x400.jpeg" width="100px" height="100px"/>
+
+<br/>
+
+<div>
+    <h2>{{<!-- InputOrderInfoHere! -->}}</h2>
+</div>
+
+
+<!--
+Here are some HTML tags you might find useful:
+
+  Form:               <form method="POST"></form>
+  Input field:        <input name="field_name" value="placeholder string"/>
+  Readonly field:     ??? (figure it out yourself)
+
+  Section:            <div></div>
+  Newline:            <br>
+  Red text:           <font size="3" color="red">ERROR MESSAGE</font> 
+  Submit button:      <button name="button_name" type="submit">Say Hi!</button>
+-->
+
+<!--
+{% raw %} This tag is to prevent Jinja from converting any of the Jinja templates below
+
+Here are some Jinja templates you might find useful:
+
+  1. Printing a variable:                       {{variable}}
+  2. If statement to check if variable exists:  {% if var %} ... {% endif %}
+  3. If statement with multiple conditions:     {% if var and var.name == 'Isaac' %}
+  4. If-Else statement:                         ???
+  5. For loop:                                  {% for booking in bookings %} ... {% endfor %}
+  6. Advanced features that may be useful for cleaner Jinja templating: 
+        {% macro %}, {% block %}, more at http://jinja.pocoo.org/docs/2.10/templates/
+
+{% endraw %}
+-->
+
+<div>
+<!-- 
+  Complete this section
+-->
+    <form method="POST">
+        <!-- Inputs -->
+        <div>
+            
+        </div>
+        
+        <!-- Buttons -->
+        {% if confirmation %}
+            <div>
+                Total fee: ${{fee}} <!-- Might have to change this line -->
+            </div>
+            
+            <button name="confirm"  type="submit">Confirm</button>
+            <button name="cancel"   type="submit">Cancel</button>
+        
+        {% else %}
+            <button name="check"    type="submit">Check Order</button>
+        
+        {% endif %}
+    </form>
+</div>
+{% endblock %}

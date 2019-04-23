@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<a href="{{ url_for('order_details') }}" style="color: #cc0011">Check order status</a>
+<h1>DIY your meal or try our classic ones!</h1>
+
+<body>   
+    <br>
+    <form method="POST">
+        <input type="submit" name="custom" value="Customised Main">
+        <input type="submit" name="premade" value="Premade Main">
+        <input type="submit" name="other" value="Sides/Drinks/Dessert">
+        <br>
+        <br>
+        {% if success %}
+            <font color="red">{{ errorcheck }}</font>
+            <br>
+            <br>
+        {% endif %}
+        <input type="submit" style="zoom: 2.4; background:rgb(11, 224, 11)" name="confirm" value="Make Order">
+        <input type="submit" name="cancel" value="Cancel" style="background:red">
+        <br>
+        <br>
+        {% if cancel %}
+        <font color="red">{{ cancel }}</font>
+        <br>
+        {% endif %}
+        {% if success %}
+        <font color="green">{{ success }}</font>
+        <br>
+        {% endif %}
+        <p>Or</p>
+        <input type="submit" name="staff" value="Staff Options" style="background:#84aced">
+    </form>
+</body>
+
+
+{% endblock %}

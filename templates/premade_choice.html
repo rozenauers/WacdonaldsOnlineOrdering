@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+<br/>
+
+<h1>Premade Main Selection</h1>
+<br>
+<br>
+<body>
+  <form method="POST">
+     <fieldset>
+        <legend>Premade Mains</legend>
+        <p>
+           <label>Select your preferred main</label>
+           <select name = "main">
+             <option value = "none">None</option>
+             <option value = "cheeseburger">Cheese Burger</option>
+             <option value = "cheeseburger2">Double Cheese Burger</option>
+             <option value = "chickenburger">Chicken Burger</option>
+             <option value = "chickenburger2">Double Chicken Burger</option>
+             <option value = "veggieburger">Veggie Burger</option>
+             <option value = "veggieburger2">Double Veggie Burger</option>
+             <option value = "chickenwrap">Chicken Wrap</option>
+             <option value = "chickenwrap2">Double Chicken Wrap</option>
+             <option value = "beefwrap">Beef Wrap</option>
+             <option value = "beefwrap2">Double Beef Wrap</option>
+
+           </select>
+        </p>
+        <br>
+        <input style="background:green" type="submit" name="add" value="Add Main to Order">
+        <input style="background:red" type="submit" name="cancel" value="Cancel">
+        <br>
+        <br>
+        {{ error }}
+     </fieldset>
+  </form>
+
+</body>
+
+
+{% endblock %}

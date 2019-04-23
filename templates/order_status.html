@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% if error %}
+    <p>{{error}}</p>
+{% else %}
+    <p style="zoom: 3.2;">Order Id: {{orderid}}</p>
+    {% if status == "Invalid Order ID" %}
+        <p style="zoom: 3.2;">{{status}}</p>
+    {% else %}
+        <p style="zoom: 3.2;">Order Status: {{status}}</p>
+    {% endif %}
+{% endif %}
+
+{% endblock %}

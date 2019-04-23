@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>Extras Selection</h1>
+<br>
+<body>
+  <form method="POST">
+     <fieldset>
+        <legend>Extras</legend>
+        <p>
+           <label>Select your preferred Side:</label><pre></pre>
+           <select name = "sides">
+             <option value = "none">None</option>
+             <option value = "nugget3">3x Nuggets</option>
+             <option value = "nugget6">6x Nuggets</option>
+             <option value = "friessmall">Small Fries</option>
+             <option value = "friesmedium">Medium Fries</option>
+             <option value = "frieslarge">Large Fries</option>
+           </select>
+           <br>
+           <br>
+           <label>Select your preferred Drink:</label><pre></pre>
+           <select name = "drinks">
+             <option value = "none">None</option>
+             <option value = "colacan">Cola Can (375ml)</option>
+             <option value = "lemonadecan">Lemonade Can (375ml)</option>
+             <option value = "waterbottle">Water Bottle (600ml)</option>
+             <option value = "teabottle">Iced Tea Peach (600ml)</option>
+             <option value = "orangesmall">Orange Juice (small)</option>
+             <option value = "orangemedium">Orange Juice (medium)</option>
+             <option value = "applesmall">Apple Juice (small)</option>
+             <option value = "applemedium">Apple Juice (medium)</option>
+           </select>
+           <br>
+           <br>
+           <label>Select your preferred Dessert:</label><pre></pre>
+           <select name = "dessert">
+             <option value = "none">None</option>
+             <option value = "chocsundsmall">Chocolate Sundae (small)</option>
+             <option value = "chocsundmedium">Chocolate Sundae (medium)</option>
+             <option value = "chocsundlarge">Chocolate Sundae (large)</option>
+             <option value = "strawsundsmall">Strawberry Sundae (small)</option>
+             <option value = "strawsundmedium">Strawberry Sundae (medium)</option>
+             <option value = "strawsundlarge">Strawberry Sundae (large)</option>
+           </select>
+           
+            {% if sidescheck == 'none' and drinkscheck == 'none' and dessertcheck == 'none' %}
+                <br>
+                <br>
+                <font color="red">{{ othererror }}</font>
+            {% endif %}
+            
+        </p>
+        <input style="background:green" type="submit" name="add" value="Add Extras to Order">
+        <input style="background:red" type="submit" name="cancel" value="Cancel">
+        <br>
+        <br>
+     </fieldset>
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+
+
+{% endblock %}

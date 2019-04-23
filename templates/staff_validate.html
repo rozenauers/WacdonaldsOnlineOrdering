@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<br/>
+
+<h1>Enter Staff Password</h1>
+<br>
+<br>
+<body>
+    <form method="POST">
+        <input type="password" style="zoom: 3;" name='p' placeholder="enter password"><label> </label><br>
+        {% if error %}
+            <font color="red">{{error}}</font><br>
+        {% endif %}
+        <br><button type='submit'>Submit</button>
+    </form>
+</body>
+
+
+{% endblock %}

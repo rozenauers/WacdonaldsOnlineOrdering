@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Your Order Has Been Confirmed!</h1>
+<p>Order Id: {{orderid}}</p><br>
+{% for a_value in main %}
+    <p>{{ a_value.containers.name }}</p>
+    {% if a_value.containers.name == "white wrap" or a_value.containers.name == "gluten free wrap" %}
+        <p>{{ (a_value.containers.quantity/100)|round|int }}</p><br>
+    {% else %}
+        <p>{{ a_value.containers.quantity }}</p><br>
+    {% endif %}    
+    <p>{{ a_value.contents.name }}</p>
+    <p>{{ a_value.contents.quantity }}</p><br>
+    {% for extras in a_value.extra %}
+        <br>
+        {{ extras.name }}
+    {% endfor %}
+{% endfor %}
+{% for b_value in other %}
+    <p>{{ b_value.name }}</p>
+    <p>{{ b_value.quantity }}</p><br>
+{% endfor %}
+<p>Subtotal: {{price}}</p><br>
+<p>Order Status: {{status}}</p><br>
+
+{% endblock %}

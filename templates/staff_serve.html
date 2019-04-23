@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block body %}
+<br/>
+
+<h1>Serve Order Selection</h1>
+<br>
+<br>
+<body>
+  <form method="POST">
+     <fieldset>
+        <p>
+           <label for="orderID">Input Order ID:</label>
+           <input id="orderID" name="orderID" placeholder="Order ID" min="0">
+           {% if serveerror %}
+              <br>
+              <p>{{ serveerror }}</p>
+           {% endif %}
+           {% if os %}
+              <br>
+              <p>{{ os }}</p>
+           {% endif %}
+        </p>
+        <br>
+        <input type="submit" name="serve" value="Serve Order">
+        <input type="submit" name="cancel" value="Cancel">
+        <br>
+        <br>
+     </fieldset>
+  </form>
+
+</body>
+
+
+{% endblock %}

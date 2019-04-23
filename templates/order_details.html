@@ -1,0 +1,17 @@
+<!-- This file is for customer checking order status -->
+{% extends 'base.html' %}
+{% block body %}
+
+<div>
+  <h1>Please enter your Order ID here:</h1>
+  <form method="POST">
+    <input style="zoom: 3;" type="number" name='orderid' placeholder="Order ID"><label> </label><br>
+    {% if error %}
+      <font color="red">{{error}}</font><br>
+    {% endif %}
+    <br><button style="zoom: 3;" type='submit'>Check</button>
+  </form>
+  
+</div>
+
+{% endblock %}

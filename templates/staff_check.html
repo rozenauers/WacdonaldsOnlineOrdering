@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block body %}
+<br/>
+
+<h1>Check Inventory Levels</h1>
+<br>
+<br>
+<body>
+  <form method="POST">
+     <fieldset>
+        <p>
+           <label for="itemName">Input Item Name:</label>
+           <input type="text" id="itemName" name="itemName" placeholder="Item name">
+           {% if nameerror %}
+              <br>
+              <font color="red">{{ nameerror }}</font>
+           {% endif %}
+
+           {% if name %}
+              <br>
+              <br>
+              <font color="black">{{ name }} : {{ inv }}</font>
+           {% endif %}
+
+        </p>
+        <br>
+        <input type="submit" name="check" value="Check Inventory">
+        <input type="submit" name="cancel" value="Cancel">
+        <br>
+        <br>
+     </fieldset>
+  </form>
+
+</body>
+
+
+{% endblock %}
+
