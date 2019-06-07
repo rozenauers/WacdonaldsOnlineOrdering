@@ -4,9 +4,9 @@
 
 ### How to use:
 
-  git clone "git@github.com:XingjianLi/Wacdonald-Order-System.git" 
+    git clone "git@github.com:XingjianLi/Wacdonald-Order-System.git" 
   
-  cd Wacdonald-Order-System                                        
+    cd Wacdonald-Order-System                                        
   
   flask and jinja2 are required, so optionally:
   
@@ -14,4 +14,4 @@
 
       pip3 install jinja2
   
-  python3 run.py
+    python3 run.py
