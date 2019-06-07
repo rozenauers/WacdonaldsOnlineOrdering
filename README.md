@@ -1,6 +1,6 @@
-# Wacdonald-Order-System
+# Wacdonald Online Ordering System
 
-## UNSW COMP1531 19T1 Assignment: Online Ordering System
+## UNSW COMP1531 19T1 Assignment
 
 ### How to use:
 
