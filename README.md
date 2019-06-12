@@ -4,7 +4,7 @@
 
 ### How to use:
 
-    git clone "git@github.com:XingjianLi/Wacdonald-Order-System.git" 
+    git clone "git@github.com:lixxj/Wacdonalds-Ordering-System.git" 
   
     cd Wacdonald-Order-System     
     
