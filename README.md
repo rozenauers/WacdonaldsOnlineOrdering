@@ -6,7 +6,7 @@
 
     git clone "git@github.com:lixxj/Wacdonalds-Ordering-System.git" 
   
-    cd Wacdonald-Order-System     
+    cd Wacdonalds-Ordering-System     
     
     python3 run.py
   
