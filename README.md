@@ -1,6 +1,4 @@
-# Wacdonald Online Ordering System
-
-## UNSW COMP1531 19T1 Assignment
+# Waccas Online Ordering System
 
 ### How to use:
 
